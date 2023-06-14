@@ -7,6 +7,7 @@ const Home = () => {
       <div className="background-image" />
       <div className="name-overlay">
         <h1>Roshni Patel</h1>
+        <h2>An Aspiring WebDev</h2>
       </div>
     </div>
   );

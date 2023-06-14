@@ -13,7 +13,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.7;
-  /* z-index: -1; */
 }
 
 .name-overlay {
@@ -25,6 +24,11 @@
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 100px;
   color: white;
+}
+
+h2 {
+  font-size: 50px;
+  color: rgb(194, 187, 187);
 }
