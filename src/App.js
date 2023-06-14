@@ -1,39 +1,25 @@
-// We import useState and useEffect in our component
-import React, { useState, useEffect } from 'react';
-// import SearchBar from './components/SearchBar';
-// import IssueList from './components/IssueList';
+import React from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import AboutMe from './pages/About';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 
 function App() {
-  // We declare a state variable that is an array called `issues` and a function to update it.
-  const [issues, setIssues] = useState([]);
-
-  // When the page loads, set the document title to something specific to this app.
-  // This only runs once because of our empty dependency array.
-  useEffect(() => {
-    document.title = 'GitHub issues';
-  }, []);
-
-  // Helper function that performs an API request and sets the `issues` array to a list of issues from GitHub
-  const getRepoIssues = (repo) => {
-    let issuesURL = `https://api.github.com/repos/${repo}/issues?direction=asc`;
-    console.log('issuesURL', issuesURL);
-    fetch(issuesURL)
-      .then((res) => res.json())
-      .then((response) => setIssues(response));
-  };
-
   return (
-    <div className="ui container">
-      {/* Here we pass our getRepoIssues function as a prop to SearchBar */}
-      <SearchBar onFormSubmit={getRepoIssues} />
-      <div className="ui grid">
-        <div className="ui row">
-          <div className="eleven wide column">
-            <IssueList issues={issues} />
-          </div>
-        </div>
-      </div>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutMe />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 

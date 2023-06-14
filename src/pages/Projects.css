@@ -1,0 +1,35 @@
+.projects-container {
+  color: white;
+  background-color: black;
+  padding: 20px;
+  height: 100vh;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.project-item {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.project-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
