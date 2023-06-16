@@ -6,7 +6,7 @@ Introducing my React-powered portfolio,  designed to showcase my expertise in we
 ## Links
 Repository: https://github.com/roshniipatel/portfolio 
 
-Deployment: https://react-portfolio0.herokuapp.com/ 
+Deployment: [https://react-portfolio0.herokuapp.com/](https://react-portfolio0-8da0c2a44b9c.herokuapp.com/) 
 
 ## Credits
 Youtube videos
